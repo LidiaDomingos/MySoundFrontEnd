@@ -1,0 +1,17 @@
+.botao_lista{
+    display: flex;
+    background-color: #E0BBE4;
+    border-radius: 5rem;
+    border: none;
+    /* flex-grow: 1; */
+    width: 2.2rem;
+    height: 2.2rem;
+    color: black;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+.ajeita_botoes{
+    display: flex;
+
+}

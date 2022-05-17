@@ -78,3 +78,14 @@ h1 {
   flex-direction: row;
   justify-content: center;
 }
+.header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.playlist {
+  display: flex;
+  flex-direction: column;
+}

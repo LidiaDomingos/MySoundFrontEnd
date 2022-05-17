@@ -1,0 +1,48 @@
+
+.appbar{
+    display: flex;
+    justify-content: flex-start;
+    background-color:#E0BBE4;
+  
+    align-items: center;
+    height: 55px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  
+  .logo{
+    margin-left: 1rem;
+    width: 40px;
+    height: 30px;
+  }
+  
+  .subtitle{
+    /* font-family: 'Roboto', sans-serif; */
+    margin: 1rem;
+  }
+  
+  .centraliza_header {
+    display: flex;
+    align-items: flex-start;
+    /* justify-items: center; */
+  }
+  
+  h1 {
+    font-family: 'Permanent Marker', cursive;
+  }
+  .container_main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .playlist {
+    display: flex;
+    flex-direction: column;
+  }

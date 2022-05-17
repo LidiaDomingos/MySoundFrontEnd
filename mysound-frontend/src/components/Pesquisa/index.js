@@ -12,7 +12,10 @@ export default function Pesquisa(props) {
 
   const pesquisaMusica = (event) => {
     event.preventDefault()
-
+    if (!titulo){
+        props.pesquisaLista([])
+    }
+    else {
     // const axios = require("axios");
 
     const options = {
@@ -27,7 +30,8 @@ export default function Pesquisa(props) {
     axios.request(options)
       .then((res)=>{
         props.pesquisaLista(res.data.data);
-      })
+      }) 
+    }
   }
 
   return (
@@ -41,7 +45,7 @@ export default function Pesquisa(props) {
             onChange={tituloModificado}
             value={titulo}
             />
-            <button className="btn" type="submit">
+            <button className="botao_pesquisar" type="submit">
                 <img src="pesquisar.png" className="logo_pesquisar" alt="logo_pesquisar"/>
             </button>
         </form>
