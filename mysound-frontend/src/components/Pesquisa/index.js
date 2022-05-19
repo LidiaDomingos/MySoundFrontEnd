@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./index.css";
+import PlaylistAleatoria from "../PlaylistAleatoria";
 
 
 export default function Pesquisa(props) {
@@ -15,6 +16,7 @@ export default function Pesquisa(props) {
     if (!titulo){
         props.pesquisaLista([])
     }
+    
     else {
     // const axios = require("axios");
 
@@ -48,6 +50,7 @@ export default function Pesquisa(props) {
             <button className="botao_pesquisar" type="submit">
                 <img src="pesquisar.png" className="logo_pesquisar" alt="logo_pesquisar"/>
             </button>
+            <PlaylistAleatoria tituloP={titulo} ></PlaylistAleatoria>
         </form>
       </div>
   );

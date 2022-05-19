@@ -1,0 +1,7 @@
+.mix{
+    display:flex;
+    justify-content: center;
+}
+.mix_fonte {
+    font-size: 2rem;
+}

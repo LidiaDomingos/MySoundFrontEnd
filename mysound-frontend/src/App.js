@@ -1,4 +1,5 @@
 import Musica from "./components/Musica";
+import MusicasA from "./components/MusicasA";
 import Pesquisa from "./components/Pesquisa";
 import Home from "./components/Home";
 import ListaPlaylist from "./components/ListaPlaylist";
@@ -23,6 +24,7 @@ export default function App() {
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/CSPlaylist" element={<CSPlaylist/>}/>
           <Route exact path="/PlaylistEspecifica" element={<PlaylistEspecifica/>}/>
+          <Route exact path="/MusicasA" element={<MusicasA/>}/>
        </Routes>
     </Router>
     </>

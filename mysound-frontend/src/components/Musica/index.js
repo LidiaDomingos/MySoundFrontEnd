@@ -36,7 +36,7 @@ export default function Musica(props) {
     //   .then((res)=>{
     //     props.pesquisaLista(res.data.data);
     //   })
-    navigate('/CSPlaylist', {state:{title:props.title, artista:props.artista, idp:props.idp.toString(), album:props.album, duracao:props.duracao.toString(), img:props.img, link:props.link, apareceP:true}});
+    navigate('/CSPlaylist', {state:{title:props.title, artista:props.artista, idp:props.idp.toString(), album:props.album, duracao:props.duracao.toString(), img:props.img, link:props.link}});
   }
   const vaiProLink = () => {
     window.open(props.link, "_blank", "noopener noreferrer");

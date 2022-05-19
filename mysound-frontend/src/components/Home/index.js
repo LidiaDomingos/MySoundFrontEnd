@@ -49,7 +49,6 @@ export default function Home() {
           <div className='header'> 
             <Pesquisa pesquisaLista={retornaLista} > </Pesquisa>
             <ListaPlaylist pesquisaListaP={retornaListaP}> </ListaPlaylist>
-            <PlaylistAleatoria></PlaylistAleatoria>
           </div>
           <div className='container_main'>
           {lista.map((musica) => (

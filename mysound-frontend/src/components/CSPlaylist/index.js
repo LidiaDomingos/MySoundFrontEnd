@@ -29,10 +29,8 @@ export default function CSPlaylist(props) {
           setName(event.target.value);
       }
     
-      
-    
       const criaPlaylist = (event) => {
-        event.preventDefault()
+        event.preventDefault();
         if (!name){
           setAparece(true);
         }
@@ -40,9 +38,7 @@ export default function CSPlaylist(props) {
         axios
           .post("http://localhost:8000/api/musicas/", { "title": location.state.title, "artista": location.state.artista, "playlist":name, "idp":location.state.idp, "img": location.state.img, "link": location.state.link,"album":location.state.album, "duracao":location.state.duracao })
           .then((res)=>{
-            setName('');
-            setAparece(true);
-            // navigate('/PlaylistEspecifica', {state:{name:name, id:id}})
+            navigate('/PlaylistEspecifica', {state:{name:name, title:location.state.title, artista:location.state.artista, idp:location.state.idp, album:location.state.album, duracao:location.state.duracao, img:location.state.img, link:location.state.link}})
           })
         }
       }

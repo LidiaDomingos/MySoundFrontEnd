@@ -16,14 +16,15 @@ export default function Playlist(props) {
       // navigate('/PlaylistEspecifica', {state:{name:name, id:id}})
       navigate('/PlaylistEspecifica', {state:{name:props.name, id:props.id}});
     })
+
   };
   
   const pegaPlaylistEspecifica = () => {
     // console.log(props);
     axios
-    .get(`http://localhost:8000/api/playlists/${props.id}`)
+    .get(`http://localhost:8000/api/playlists/${props.name}`)
     .then((res) => {
-    navigate('/PlaylistEspecifica', {state:{name:props.name, id:props.id}});
+    navigate('/PlaylistEspecifica', {state:{name:props.name}});
   })};
 
   return (
