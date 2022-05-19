@@ -23,15 +23,16 @@ export default function MusicasA(props) {
   // });
   // setListaA1(listaA.slice(0,10));
   const nomePla = (location.state.mix).replace(/( )+/g, "_");
-  useEffect(() => {
-    axios
-    .get(`http://localhost:8000/api/playlists/Mix_${nomePla}`)
-    .then((res) => {
-      console.log(res);
-      setListaB(res.data);
-      console.log(listaB);
-  }, [])
-});
+  console.log(`Mix_${nomePla}`);
+//   useEffect(() => {
+//     axios
+//     .get(`http://localhost:8000/api/playlists/Mix_${nomePla}`)
+//     .then((res) => {
+//       console.log(res);
+//       setListaB(res.data);
+//       console.log(listaB);
+//   }, [])
+// });
   // axios
   //   .get("http://localhost:8000/api/musicas/")
   //   .then((res) => console.log(res));

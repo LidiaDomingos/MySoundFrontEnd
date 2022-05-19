@@ -21,11 +21,8 @@ export default function Playlist(props) {
   
   const pegaPlaylistEspecifica = () => {
     // console.log(props);
-    axios
-    .get(`http://localhost:8000/api/playlists/${props.name}`)
-    .then((res) => {
     navigate('/PlaylistEspecifica', {state:{name:props.name}});
-  })};
+  };
 
   return (
       <div className='formatacao'>
@@ -37,7 +34,7 @@ export default function Playlist(props) {
                           &#xe039;
                       </i>
                     </div>
-                    <h1>{props.name}</h1>
+                    <h1>{(props.name).replace("_"," ").replace(/(_)+/g, " ")}</h1>
                 </div>
             </button>
             <button className='fav2' style={{cursor:"pointer"}} onClick={adicionaNaPlaylist}  >

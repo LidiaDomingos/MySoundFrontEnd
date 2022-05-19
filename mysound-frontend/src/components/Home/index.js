@@ -52,11 +52,11 @@ export default function Home() {
           </div>
           <div className='container_main'>
           {lista.map((musica) => (
-              <Musica key={`musica__${musica.id}`} title={musica.title} img = {musica.album.cover_medium} duracao = {musica.duration} artista = {musica.artist.name} album = {musica.album.title} link = {musica.link} idp = {musica.id}></Musica>
+              <Musica key={`musica__${musica.id}`} title={musica.title} img = {musica.album.cover_medium} duracao = {musica.duration} artista = {musica.artist.name} album = {musica.album.title} link = {musica.link} idp = {musica.id} ></Musica>
             ))}
           <div className='playlist'>
             {listaP.map((playlist) => (
-                <Playlist key={`playlist__${playlist.id}`} name={playlist.playlist} id = {playlist.id}></Playlist>
+                <Playlist key={`playlist__${playlist.id}`} name={playlist.playlist} id = {playlist.id} mostra = {false}></Playlist>
               ))}
           </div>
           </div>

@@ -56,7 +56,8 @@ export default function PlaylistAleatoria(props) {
         .then(async (res)=>{
             console.log(res.data.data);
             const listaA = shuffleArray(res.data.data);
-            const listaA1 = listaA.slice(0,10);
+            const listaA1 = (res.data.data).slice(0,10);
+            console.log(listaA1);
             let nomePl = props.tituloP;
             console.log("entrei aqui");
             // navigate('/MusicasA', {state:{aleatoria:res.data.data, mix:props.titulo}});
@@ -66,7 +67,7 @@ export default function PlaylistAleatoria(props) {
                 // console.log('entroaqui?');
                 posta(musica, nomePl)
                 ))};
-            // navigate('/MusicasA', {state:{aleatoria:listaA1, mix:props.tituloP}});
+            navigate('/MusicasA', {state:{aleatoria:listaA1, mix:props.tituloP}});
         })
         
     }
