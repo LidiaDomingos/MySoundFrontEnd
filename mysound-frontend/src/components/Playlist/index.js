@@ -34,11 +34,13 @@ export default function Playlist(props) {
                           &#xe039;
                       </i>
                     </div>
-                    <h1>{(props.name).replace("_"," ").replace(/(_)+/g, " ")}</h1>
+                    <div className="margin-h4">
+                    <h4>{(props.name.replace("_"," ").replace(/(_)+/g, " "))}</h4>
+                    </div>
                 </div>
             </button>
             <button className='fav2' style={{cursor:"pointer"}} onClick={adicionaNaPlaylist}  >
-              <i className="fa">&#xf055;</i>
+              <div className='fa-2x'><i className="fa">&#xf055;</i></div>
             </button>
         </div>
       </div>

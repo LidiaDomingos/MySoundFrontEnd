@@ -47,21 +47,46 @@ export default function CSPlaylist(props) {
     <>
         <div className='container-play'> 
           <form className="form-playlist" onSubmit={criaPlaylist}>
-          <input
-            className="form-card-playlist"
-            type="text"
-            name="name"
-            placeholder="Nova playlist"
-            onChange={nameModificado}
-            value={name}
-          />
-          <button className="btn" type="submit">Criar</button>
-        </form>
+            <input
+              className="form-card-playlist"
+              type="text"
+              name="name"
+              placeholder="Nova playlist"
+              onChange={nameModificado}
+              value={name}
+            />
+            <button className="btn" type="submit">Criar</button>
+          </form>
         </div>
-        <div className='playlist'>
-            {playlists.map((playlist) => (
-                <Playlist key={`playlist__${playlist.id}`} name={playlist.playlist} id ={playlist.id} title = {location.state.title} artista = {location.state.artista} idp = {location.state.idp} album = {location.state.album} img={location.state.img} link = {location.state.link} duracao = {location.state.duracao}></Playlist>
-              ))}
+        <div className="ajeita-form-csd">
+          <div className="card3">
+            <img src={`${location.state.img}`} className="imagem3" alt="imagem"/>
+            <div className='informacoes3'>
+              <div className='cardtitle3'>
+                <div className='title3'>
+                  <h2>{location.state.title}</h2>
+                </div>
+                <div className='artista_album3'>
+                  <h3>{location.state.artista} - {location.state.album}</h3>
+              </div>
+              </div>
+              <div className='durfav3'>
+                <div className="ajeitando_duration3" >
+                  <div className='duration3' style={{cursor:"pointer"}} onClick={() =>  window.open(location.state.link, "_blank", "noopener noreferrer")} >
+                    <i className='fab fa-soundcloud'></i>
+                    <i>
+                      {((location.state.duracao)/60).toFixed(2).toString().replace(".",":")}
+                    </i>
+                  </div>
+                </div>
+              </div>
+              </div>
+          </div>
+          <div className='playlist'>
+              {playlists.map((playlist) => (
+                  <Playlist key={`playlist__${playlist.playlist}`} name={playlist.playlist} id ={playlist.playlist} title = {location.state.title} artista = {location.state.artista} idp = {location.state.idp} album = {location.state.album} img={location.state.img} link = {location.state.link} duracao = {location.state.duracao}></Playlist>
+                ))}
+          </div>
         </div>
       </>
   );

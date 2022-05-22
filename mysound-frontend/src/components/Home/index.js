@@ -19,33 +19,24 @@ export default function Home() {
   const [listaP, setListaP] = useState([]);
   const navigate = useNavigate();
   const location = useLocation();
-  // axios
-  //   .get("http://localhost:8000/api/musicas/")
-  //   .then((res) => console.log(res));
 
-    const retornaLista = (lista) => {
-      setLista(lista);
-      setListaP([]);
-      console.log(lista);
-    };
+  const retornaLista = (lista) => {
+    setLista(lista);
+    setListaP([]);
+    console.log(lista);
+  };
 
-    const retornaListaP = (listaP) => {
-      setLista([]);
-      setListaP(listaP);
-      console.log(listaP);
-    };
-  
+  const retornaListaP = (listaP) => {
+    setLista([]);
+    setListaP(listaP);
+    console.log(listaP);
+  };
+    
   return (
     <>
     
     <main className = "background">
         <div className="App">
-          {/* <div className="appbar">
-            <div className="centraliza_header">
-              <img src="mysound_logo.png" className="logo" alt="logo"/>
-              <h1 className="subtitle"></h1>
-            </div>
-          </div> */}
           <div className='header'> 
             <Pesquisa pesquisaLista={retornaLista} > </Pesquisa>
             <ListaPlaylist pesquisaListaP={retornaListaP}> </ListaPlaylist>
@@ -56,7 +47,20 @@ export default function Home() {
             ))}
           <div className='playlist'>
             {listaP.map((playlist) => (
-                <Playlist key={`playlist__${playlist.id}`} name={playlist.playlist} id = {playlist.id} mostra = {false}></Playlist>
+                <div className='formatacao' key={`playlist__${playlist.playlist}`}>
+                  <div className='card_playlist'>
+                      <button className='cor' style={{cursor:"pointer"}} onClick={() => navigate('/PlaylistEspecifica', {state:{name:playlist.playlist}}) }>
+                          <div className='ajeita_p'>
+                              <div className='img-p'>
+                                <i className="material-icons">
+                                    &#xe039;
+                                </i>
+                              </div>
+                              <h1>{(playlist.playlist.replace("_"," ").replace(/(_)+/g, " "))}</h1>
+                          </div>
+                      </button>
+                  </div>
+                </div>
               ))}
           </div>
           </div>

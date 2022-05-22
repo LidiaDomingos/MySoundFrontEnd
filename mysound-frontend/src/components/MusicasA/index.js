@@ -1,54 +1,60 @@
-import Musica from "../Musica";
-import Pesquisa from "../Pesquisa";
-import ListaPlaylist from "../ListaPlaylist";
-import Playlist from "../Playlist";
-import PlaylistAleatoria from "../PlaylistAleatoria";
-import CSPlaylist from "../CSPlaylist";
+
 import React from 'react';
 import { useLocation, useNavigate} from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import {BrowserRouter as Router , Route, Routes  } from "react-router-dom";
 import "./index.css";
 
 
 export default function MusicasA(props) {
-  const navigate = useNavigate();
   const location = useLocation();
   const [listaB, setListaB] = useState([]);
 
-  // listaA1.map((musica) => {
-  //   posta(musica, location.state.mix);
-  //   console.log("POSTEEEIIIIIIIII");
-  // });
-  // setListaA1(listaA.slice(0,10));
-  const nomePla = (location.state.mix).replace(/( )+/g, "_");
-  console.log(`Mix_${nomePla}`);
-//   useEffect(() => {
-//     axios
-//     .get(`http://localhost:8000/api/playlists/Mix_${nomePla}`)
-//     .then((res) => {
-//       console.log(res);
-//       setListaB(res.data);
-//       console.log(listaB);
-//   }, [])
-// });
-  // axios
-  //   .get("http://localhost:8000/api/musicas/")
-  //   .then((res) => console.log(res));
-
-   
+  const nome4 = location.state.mix
+  const nomePla = (`Mix_${(nome4).replace(/( )+/g, "_")}`);
+  useEffect(() => {
+  axios
+  .get(`http://localhost:8000/api/playlists/${nomePla}`)
+  .then((res) => {
+    setListaB(res.data);
+  })}
+  , []);
+  
+  
+  
   return (
     <>
-    <main className = "background">
+    <main className = "background2" >
         <div className = 'mix'>
-            <h3 className='mix_fonte'>
-            {`Mix ${location.state.mix}`}
-            </h3>
+            <h1 className='mix_fonte'>
+            {`Mix ${nome4}`}
+            </h1>
         </div>
-        <div className='container_main'>
+        <div className='container-main2'>
         {listaB.map((musica) => (
-              <Musica key={`musica__${musica.id}`} title={musica.title} img = {musica.album.cover_medium} duracao = {musica.duration} artista = {musica.artist.name} album = {musica.album.title} link = {musica.link} idp = {musica.id}></Musica>
+              <div className="card2" key={`musica__${musica.id}`}>
+              <img src={`${musica.img}`} className="imagem2" alt="imagem"/>
+              <div className='informacoes2'>
+                <div className='cardtitle2'>
+                  <div className='title2'>
+                    <h2>{musica.title}</h2>
+                  </div>
+                  <div className='artista_album2'>
+                    <h3>{musica.artista} - {musica.album}</h3>
+                </div>
+                </div>
+                <div className='durfav2'>
+                  <div className="ajeitando_duration2" >
+                    <div className='duration2' style={{cursor:"pointer"}} onClick={() =>  window.open(musica.link, "_blank", "noopener noreferrer")}>
+                      <i className='fab fa-soundcloud'></i>
+                      <i>
+                      {((musica.duracao)/60).toFixed(2).toString().replace(".",":")}
+                      </i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             ))}
         </div>
     </main>

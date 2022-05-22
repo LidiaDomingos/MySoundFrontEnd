@@ -19,23 +19,6 @@ export default function Musica(props) {
   const location = useLocation();
 
   const salvaPlaylist = () => {
-    // axios
-    // .post("http://localhost:8000/api/musicas/",{ "title": props.titulo, "artista": props.artista, "idp":props.id, "playlist":"This is Coldplay"})
-    // .then((res) => console.log(res.data));
-    
-    // const options = {
-    // method: 'GET',
-    // url: 'https://deezerdevs-deezer.p.rapidapi.com/search',
-    // params: {q: (titulo)},
-    // headers: {
-    //     'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com',
-    //     'X-RapidAPI-Key': 'd2a67cb7c8mshc67816be1dec0ffp101f6bjsn6de87a7afad3'
-    // }
-    // };
-    // axios.request(options)
-    //   .then((res)=>{
-    //     props.pesquisaLista(res.data.data);
-    //   })
     navigate('/CSPlaylist', {state:{title:props.title, artista:props.artista, idp:props.idp.toString(), album:props.album, duracao:props.duracao.toString(), img:props.img, link:props.link}});
   }
   const vaiProLink = () => {
@@ -63,9 +46,9 @@ export default function Musica(props) {
               </i>
             </div>
           </div>
-          <button className='fav'style={{cursor:"pointer"}}  onClick={salvaPlaylist}>
+          <button className='fav' style={{cursor:"pointer"}}  onClick={salvaPlaylist}>
             <div>        
-              <i className="fas fa-heart"></i>             
+              <i className="fas fa-heart"><></></i>             
             </div>
           </button>
         </div>

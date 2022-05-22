@@ -36,7 +36,7 @@ export default function PlaylistAleatoria(props) {
        "album":musica.album.title, "duracao":musica.duration }).then((response)=> {console.log('postei')})
      }
 
-    const pegaPlaylist = (event) => {
+    const pegaPlaylist2 = (event) => {
         event.preventDefault();
         if (!props.tituloP){
             setAleatoria([]);
@@ -75,7 +75,7 @@ export default function PlaylistAleatoria(props) {
 
   return (
     <div className='ajeita_botoes'>
-        <button  className='botao_aleatorio' onClick={pegaPlaylist}>
+        <button  className='botao_aleatorio' onClick={pegaPlaylist2}>
             <i className='fas fa-random'></i>
         </button>
     </div>
