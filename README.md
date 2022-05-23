@@ -1,3 +1,12 @@
+# Projeto 2 - Tecnologias Web
+
+Esse aplicativo tem como objetivo ser possível a criação de playlists com suas músicas favoritas e também receber uma playlist aleatória de acordo com a música ou artista que você pesquisar. A api utilizada foi: https://rapidapi.com/deezerdevs/api/deezer-1/
+É possível pesquisar a música clicando no botão pesquisar, que é o primeiro botão na barra de pesquisa, e assim, quando aparecer os cards das músicas, clicar no botão que fica no lado direito do card. Dessa forma, é redirecionado para adicionar, clicando no botão mais a direita no card da playlists já existentes que aparecem ou criar uma nova playlist. Para criar uma playlist com músicas aleatórias baseadas em uma que você já escreveu, basta clicar no botão mais a direita dentro da barra de pesquisa.
+Além disso, uma implementação extra foi o acesso ao link da música no próprio deezer, por meio do card da música no botão á esquerda.
+Por algum motivo, os icons não estão aparecendo quando foi feito o deploy para o Heroku, porém, se o aplicativo rodar localmente, os icons aparecem de acordo.
+Link do heroku front-end: https://polar-castle-53848.herokuapp.com/
+Link do heroku back-end: https://intense-headland-73841.herokuapp.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
