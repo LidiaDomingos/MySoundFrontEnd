@@ -1,11 +1,28 @@
 # Projeto 2 - Tecnologias Web
 
-Esse aplicativo tem como objetivo ser possível a criação de playlists com suas músicas favoritas e também receber uma playlist aleatória de acordo com a música ou artista que você pesquisar. A api utilizada foi: https://rapidapi.com/deezerdevs/api/deezer-1/
+- Esse aplicativo tem como objetivo ser possível a criação de playlists com suas músicas favoritas e também receber uma playlist aleatória de acordo com a música ou artista que você pesquisar. A api utilizada foi: https://rapidapi.com/deezerdevs/api/deezer-1/
 É possível pesquisar a música clicando no botão pesquisar, que é o primeiro botão na barra de pesquisa, e assim, quando aparecer os cards das músicas, clicar no botão que fica no lado direito do card. Dessa forma, é redirecionado para adicionar, clicando no botão mais a direita no card da playlists já existentes que aparecem ou criar uma nova playlist. Para criar uma playlist com músicas aleatórias baseadas em uma que você já escreveu, basta clicar no botão mais a direita dentro da barra de pesquisa.
-Além disso, uma implementação extra foi o acesso ao link da música no próprio deezer, por meio do card da música no botão á esquerda.
+- Além disso, uma implementação extra foi o acesso ao link da música no próprio deezer, por meio do card da música no botão á esquerda. O botão na página inicial fora da barra de pesquisa retorna as playlists existente e se clicar no nome da playlist, tem acesso ás músicas já adicionadas.
 Por algum motivo, os icons não estão aparecendo quando foi feito o deploy para o Heroku, porém, se o aplicativo rodar localmente, os icons aparecem de acordo.
 Link do heroku front-end: https://polar-castle-53848.herokuapp.com/
 Link do heroku back-end: https://intense-headland-73841.herokuapp.com/
+### Como deveria aparecer os icons:
+<img width="918" alt="image" src="https://user-images.githubusercontent.com/72155007/169734418-e3b7ef2a-d7c5-4fd0-8614-6e7a01a6178a.png">
+### Exemplo de fluxos:
+1.1) Pesquisando a música:
+<img width="904" alt="image" src="https://user-images.githubusercontent.com/72155007/169734622-861a1dee-79ff-4484-ad68-3a28f0efb369.png">
+1.2) Depois de clicar no coração para adicionar á uma playlist:
+<img width="950" alt="image" src="https://user-images.githubusercontent.com/72155007/169734666-d15eea88-96c3-482d-b4f4-82ffd3f65da4.png">
+1.3) Após apertar em criar uma nova playlist: 
+<img width="934" alt="image" src="https://user-images.githubusercontent.com/72155007/169734731-ff22ec93-520c-4a80-b77e-974f12f6ee07.png">
+1.4) Poderia também, ao invés de criar uma nova playlist, apenas apertar no botão de mais em alguma playlist existente:
+<img width="932" alt="image" src="https://user-images.githubusercontent.com/72155007/169735109-133587fe-15ae-43a8-8362-a00f05925d4d.png">
+2.1) Criando playlist aleatória baseada em um artista:
+<img width="945" alt="image" src="https://user-images.githubusercontent.com/72155007/169735187-0e89375c-71d0-48b4-9dc2-b64cc036e30c.png">
+2.2) <img width="933" alt="image" src="https://user-images.githubusercontent.com/72155007/169735238-b487fa37-8ebb-4ce9-8f38-bef3ce839a41.png">
+
+
+
 
 # Getting Started with Create React App
 
