@@ -14,7 +14,7 @@ export default function MusicasA(props) {
   const nomePla = (`Mix_${(nome4).replace(/( )+/g, "_")}`);
   useEffect(() => {
   axios
-  .get(`http://localhost:8000/api/playlists/${nomePla}`)
+  .get(`https://intense-headland-73841.herokuapp.com/api/playlists/${nomePla}`)
   .then((res) => {
     setListaB(res.data);
   })}

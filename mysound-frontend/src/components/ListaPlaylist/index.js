@@ -7,7 +7,7 @@ export default function ListaPlaylist(props) {
   
   const pegaPlaylist = () => {
     axios
-    .get("http://localhost:8000/api/playlists/")
+    .get("https://intense-headland-73841.herokuapp.com/api/playlists/")
     .then((res) =>  {       
         props.pesquisaListaP(res.data)
     });

@@ -14,7 +14,7 @@ export default function PlaylistEspecifica() {
     // if (aparece == true ){
   const nomeP = (location.state.name).replace(/( )+/g, "_");
   axios
-  .get(`http://localhost:8000/api/playlists/${nomeP}`)
+  .get(`https://intense-headland-73841.herokuapp.com/api/playlists/${nomeP}`)
   .then((res) => {
     console.log(location.state.name)
     setLista3(res.data);

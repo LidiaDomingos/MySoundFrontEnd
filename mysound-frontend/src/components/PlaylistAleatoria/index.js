@@ -31,7 +31,7 @@ export default function PlaylistAleatoria(props) {
     
     function posta(musica, name) {
         axios
-       .post("http://localhost:8000/api/musicas/", { "title": musica.title, "artista": musica.artist.name, 
+       .post("https://intense-headland-73841.herokuapp.com/api/musicas/", { "title": musica.title, "artista": musica.artist.name, 
        "playlist":`Mix ${name}`, "idp":musica.id, "img": musica.album.cover_medium, "link": musica.link,
        "album":musica.album.title, "duracao":musica.duration }).then((response)=> {console.log('postei')})
      }

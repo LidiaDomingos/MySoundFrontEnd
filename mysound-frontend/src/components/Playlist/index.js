@@ -11,7 +11,7 @@ export default function Playlist(props) {
 
   const adicionaNaPlaylist = () => {
     axios
-    .post("http://localhost:8000/api/musicas/", { "title": props.title, "artista": props.artista, "playlist":props.name, "idp":props.idp, "album":props.album,"link":props.link,"duracao":props.duracao,"img":props.img})
+    .post("https://intense-headland-73841.herokuapp.com/api/musicas/", { "title": props.title, "artista": props.artista, "playlist":props.name, "idp":props.idp, "album":props.album,"link":props.link,"duracao":props.duracao,"img":props.img})
     .then((res)=>{
       // navigate('/PlaylistEspecifica', {state:{name:name, id:id}})
       navigate('/PlaylistEspecifica', {state:{name:props.name, id:props.id}});

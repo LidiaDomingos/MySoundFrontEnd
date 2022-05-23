@@ -14,7 +14,7 @@ export default function CSPlaylist(props) {
     useEffect(() => {
       if (aparece == true ){
         axios
-      .get("http://localhost:8000/api/playlists/")
+      .get("https://intense-headland-73841.herokuapp.com/api/playlists/")
       .then((res) => 
         setPlaylists(res.data));
         setAparece(false);
@@ -36,7 +36,7 @@ export default function CSPlaylist(props) {
         }
         else{
         axios
-          .post("http://localhost:8000/api/musicas/", { "title": location.state.title, "artista": location.state.artista, "playlist":name, "idp":location.state.idp, "img": location.state.img, "link": location.state.link,"album":location.state.album, "duracao":location.state.duracao })
+          .post("https://intense-headland-73841.herokuapp.com/api/musicas/", { "title": location.state.title, "artista": location.state.artista, "playlist":name, "idp":location.state.idp, "img": location.state.img, "link": location.state.link,"album":location.state.album, "duracao":location.state.duracao })
           .then((res)=>{
             navigate('/PlaylistEspecifica', {state:{name:name, title:location.state.title, artista:location.state.artista, idp:location.state.idp, album:location.state.album, duracao:location.state.duracao, img:location.state.img, link:location.state.link}})
           })
