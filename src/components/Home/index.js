@@ -56,7 +56,7 @@ export default function Home() {
                                     &#xe039;
                                 </i>
                               </div>
-                              <h1>{(playlist.playlist.replace("_"," ").replace(/(_)+/g, " "))}</h1>
+                              <h4>{(playlist.playlist.replace("_"," ").replace(/(_)+/g, " "))}</h4>
                           </div>
                       </button>
                   </div>
